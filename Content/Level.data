@@ -1,0 +1,686 @@
+Level = 
+{
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 1,
+		},
+		Named = 
+		{
+			string Name = "LevelSettings",
+		},
+		GridDraw = 
+		{
+			bool Active = true,
+			bool HalfCellOffset = false,
+			float CellSize = 1,
+			GridAxis Axis = YAxis,
+			int Lines = 100,
+			bool DrawAxisOrigins = true,
+			bool AlwaysDrawInEditor = true,
+			bool DrawInGame = true,
+			Vec4 GridColor = [0.5, 0.5, 0.5, 0.400000006],
+			Vec4 GridHiLight = [0, 0, 0, 0.400000006],
+			int HilightInterval = 10,
+			bool FollowEditorCamera = false,
+		},
+		DragEffect = 
+		{
+			bool Active = true,
+			bool WakeUpOnChange = true,
+			float Drag = 0.699999988,
+			float AngularDrag = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 2,
+		},
+		Named = 
+		{
+			string Name = "EditorCamera",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.04554701, 3.16968465, 4.44962883],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [-0.150878608, -0.472317517, -0.082432352, 0.864498019],
+		},
+		Camera = 
+		{
+			Facing Facing = NegativeZ,
+			float NearPlane = 0.5,
+			float FarPlane = 500,
+			PerspectiveMode PerspectiveMode = Perspective,
+			float FieldOfView = 45,
+			float Size = 20,
+		},
+		CameraViewport = 
+		{
+			bool RenderInEditor = true,
+			bool RenderInGame = false,
+			bool RenderToViewport = true,
+			bool ForwardViewportEvents = false,
+			uint RenderOrder = 0,
+			Vec2 NormalizedSize = [1, 1],
+			Vec2 NormalizedOffset = [0, 0],
+			CogPath Camera = 
+			{
+				string Path = ".",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			CogPath Renderer = 
+			{
+				string Path = ".",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec2 Resolution = [1280, 720],
+			ViewportScaling ViewportScaling = Fill,
+			Vec4 MarginColor = [0, 0, 0, 1],
+		},
+		DefaultRenderer = 
+		{
+			Vec4 ClearColor = [0.125, 0.125, 0.125, 1],
+			bool DrawDebug = true,
+		},
+		EditorCameraController = 
+		{
+			ControlMode ControlMode = Orbit,
+			float LookDistance = 8.26496315,
+			float VerticalAngle = 0.3455742,
+			float HorizontalAngle = 1.00007141,
+			Vec3 LookTarget = [0.498324364, 0.370035887, 0.248517722],
+			float MoveSensitivity = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Named = 
+		{
+			string Name = "SpaceShip",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Orientation = 
+		{
+			Vec3 GlobalUp = [0, 1, 0],
+			Vec3 UpVector = [0, 1, 0],
+			Vec3 ForwardVector = [-0, -0, -1],
+			OrientationBases DefaultBases = ForwardNegativeZUpY,
+		},
+		RigidBody = 
+		{
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+			Enum DynamicState = Dynamic,
+			bool AllowSleep = true,
+			bool Asleep = false,
+			bool RotationLocked = false,
+			Enum Mode2D = InheritFromSpace,
+		},
+		FlightInputInterpreter = 
+		{
+			float StickDeadZone = 0.100000001,
+			float TriggerDeadZone = 0.100000001,
+			Vec2 MouseSensitivity = [1, 1],
+			Enum AccelerateKey = Space,
+			Enum PitchUpKey = W,
+			Enum PitchDownKey = S,
+			Enum YawLeftKey = A,
+			Enum YawRightKey = D,
+			Enum RollLeftKey = Q,
+			Enum RollRightKey = E,
+			Enum BoostKey = Shift,
+			Enum BoostButton = A,
+		},
+		ForceBasedFlightController = 
+		{
+			bool ApplyConstantThrust = true,
+			float ThrustForce = 10,
+			float ReverseForce = 5,
+			float PitchYawForce = 5,
+			float RollForce = 5,
+			float BoostForce = 100,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 4,
+				},
+				Named = 
+				{
+					string Name = "PlayerModel",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				RigidBody = 
+				{
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+					Enum DynamicState = Kinematic,
+					bool AllowSleep = true,
+					bool Asleep = false,
+					bool RotationLocked = false,
+					Enum Mode2D = InheritFromSpace,
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 5,
+						},
+						Named = 
+						{
+							string Name = "Gun",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-1.25, 0.114591047, -0.850334167],
+							Vec3 Scale = [0.25, 0.289018273, 0.862823725],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Orientation = 
+						{
+							Vec3 GlobalUp = [0, 1, 0],
+							Vec3 UpVector = [0, 1, 0],
+							Vec3 ForwardVector = [-0, -0, -1],
+							OrientationBases DefaultBases = ForwardNegativeZUpY,
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsEvents = true,
+							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
+							string CollisionGroup = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 HalfSize = [0.5, 0.5, 0.5],
+						},
+						Model = 
+						{
+							bool Visible = true,
+							bool ViewCulling = true,
+							bool VisibilityEvents = true,
+							string Material = "4de020863e85bb61:DefaultMaterial",
+							string Mesh = "4de0354322b345ae:Cube",
+						},
+						RigidBody = 
+						{
+							Vec3 Velocity = [0, 0, 0],
+							Vec3 AngularVelocity = [0, 0, 0],
+							Enum DynamicState = Kinematic,
+							bool AllowSleep = true,
+							bool Asleep = false,
+							bool RotationLocked = false,
+							Enum Mode2D = InheritFromSpace,
+						},
+						Hierarchy = 
+						{
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 6,
+						},
+						Named = 
+						{
+							string Name = "LeftThrust",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-1.5, 0.0146566126, 1.30672646],
+							Vec3 Scale = [0.249999985, 0.647117794, 0.225795239],
+							Quat Rotation = [0.707107067, -3.54671634e-08, -2.49304239e-08, 0.707106531],
+						},
+						Model = 
+						{
+							bool Visible = true,
+							bool ViewCulling = true,
+							bool VisibilityEvents = true,
+							string Material = "4de020863e85bb61:DefaultMaterial",
+							string Mesh = "4de0354322b3572e:Cylinder",
+						},
+						CylinderCollider = 
+						{
+							bool Ghost = false,
+							bool SendsEvents = true,
+							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
+							string CollisionGroup = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							float Radius = 1,
+							float Height = 1,
+							AxisDirection Direction = Y,
+						},
+						RigidBody = 
+						{
+							Vec3 Velocity = [0, 0, 0],
+							Vec3 AngularVelocity = [0, 0, 0],
+							Enum DynamicState = Kinematic,
+							bool AllowSleep = true,
+							bool Asleep = false,
+							bool RotationLocked = false,
+							Enum Mode2D = InheritFromSpace,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 7,
+						},
+						Named = 
+						{
+							string Name = "MidThrust",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0.0146566126, 1.30672646],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0.707107067, -3.54671634e-08, -2.49304239e-08, 0.707106531],
+						},
+						Model = 
+						{
+							bool Visible = true,
+							bool ViewCulling = true,
+							bool VisibilityEvents = true,
+							string Material = "4de020863e85bb61:DefaultMaterial",
+							string Mesh = "4de0354322b3572e:Cylinder",
+						},
+						CylinderCollider = 
+						{
+							bool Ghost = false,
+							bool SendsEvents = true,
+							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
+							string CollisionGroup = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							float Radius = 0.5,
+							float Height = 1,
+							AxisDirection Direction = Y,
+						},
+						RigidBody = 
+						{
+							Vec3 Velocity = [0, 0, 0],
+							Vec3 AngularVelocity = [0, 0, 0],
+							Enum DynamicState = Kinematic,
+							bool AllowSleep = true,
+							bool Asleep = false,
+							bool RotationLocked = false,
+							Enum Mode2D = InheritFromSpace,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 8,
+						},
+						Named = 
+						{
+							string Name = "Gun",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [1.25, 0.114591047, -0.850334167],
+							Vec3 Scale = [0.25, 0.289018273, 0.862823725],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Orientation = 
+						{
+							Vec3 GlobalUp = [0, 1, 0],
+							Vec3 UpVector = [0, 1, 0],
+							Vec3 ForwardVector = [-0, -0, -1],
+							OrientationBases DefaultBases = ForwardNegativeZUpY,
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsEvents = true,
+							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
+							string CollisionGroup = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 HalfSize = [0.5, 0.5, 0.5],
+						},
+						Model = 
+						{
+							bool Visible = true,
+							bool ViewCulling = true,
+							bool VisibilityEvents = true,
+							string Material = "4de020863e85bb61:DefaultMaterial",
+							string Mesh = "4de0354322b345ae:Cube",
+						},
+						RigidBody = 
+						{
+							Vec3 Velocity = [0, 0, 0],
+							Vec3 AngularVelocity = [0, 0, 0],
+							Enum DynamicState = Kinematic,
+							bool AllowSleep = true,
+							bool Asleep = false,
+							bool RotationLocked = false,
+							Enum Mode2D = InheritFromSpace,
+						},
+						Hierarchy = 
+						{
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 9,
+						},
+						Named = 
+						{
+							string Name = "Wing",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [1, 0.0146566126, 0.350043297],
+							Vec3 Scale = [1.6050818, 0.289018273, 1.66491675],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Orientation = 
+						{
+							Vec3 GlobalUp = [0, 1, 0],
+							Vec3 UpVector = [0, 0, 1],
+							Vec3 ForwardVector = [0, 1, 0],
+							OrientationBases DefaultBases = ForwardYUpZ,
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsEvents = true,
+							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
+							string CollisionGroup = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 HalfSize = [0.5, 0.5, 0.5],
+						},
+						Model = 
+						{
+							bool Visible = true,
+							bool ViewCulling = true,
+							bool VisibilityEvents = true,
+							string Material = "4de020863e85bb61:DefaultMaterial",
+							string Mesh = "4de0354322b345ae:Cube",
+						},
+						RigidBody = 
+						{
+							Vec3 Velocity = [0, 0, 0],
+							Vec3 AngularVelocity = [0, 0, 0],
+							Enum DynamicState = Kinematic,
+							bool AllowSleep = true,
+							bool Asleep = false,
+							bool RotationLocked = false,
+							Enum Mode2D = InheritFromSpace,
+						},
+						Hierarchy = 
+						{
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 10,
+						},
+						Named = 
+						{
+							string Name = "Wing",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-0.999998093, 0.0146566126, 0.350043297],
+							Vec3 Scale = [1.6050818, 0.289018273, 1.66491675],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Orientation = 
+						{
+							Vec3 GlobalUp = [0, 1, 0],
+							Vec3 UpVector = [0, 0, 1],
+							Vec3 ForwardVector = [0, 1, 0],
+							OrientationBases DefaultBases = ForwardYUpZ,
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsEvents = true,
+							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
+							string CollisionGroup = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 HalfSize = [0.5, 0.5, 0.5],
+						},
+						Model = 
+						{
+							bool Visible = true,
+							bool ViewCulling = true,
+							bool VisibilityEvents = true,
+							string Material = "4de020863e85bb61:DefaultMaterial",
+							string Mesh = "4de0354322b345ae:Cube",
+						},
+						RigidBody = 
+						{
+							Vec3 Velocity = [0, 0, 0],
+							Vec3 AngularVelocity = [0, 0, 0],
+							Enum DynamicState = Kinematic,
+							bool AllowSleep = true,
+							bool Asleep = false,
+							bool RotationLocked = false,
+							Enum Mode2D = InheritFromSpace,
+						},
+						Hierarchy = 
+						{
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 11,
+						},
+						Named = 
+						{
+							string Name = "RightThrust",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [1.5, 0.0146566126, 1.30672646],
+							Vec3 Scale = [0.249999985, 0.647117794, 0.225795239],
+							Quat Rotation = [0.707107067, -3.54671634e-08, -2.49304239e-08, 0.707106531],
+						},
+						Model = 
+						{
+							bool Visible = true,
+							bool ViewCulling = true,
+							bool VisibilityEvents = true,
+							string Material = "4de020863e85bb61:DefaultMaterial",
+							string Mesh = "4de0354322b3572e:Cylinder",
+						},
+						CylinderCollider = 
+						{
+							bool Ghost = false,
+							bool SendsEvents = true,
+							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
+							string CollisionGroup = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							float Radius = 1,
+							float Height = 1,
+							AxisDirection Direction = Y,
+						},
+						RigidBody = 
+						{
+							Vec3 Velocity = [0, 0, 0],
+							Vec3 AngularVelocity = [0, 0, 0],
+							Enum DynamicState = Kinematic,
+							bool AllowSleep = true,
+							bool Asleep = false,
+							bool RotationLocked = false,
+							Enum Mode2D = InheritFromSpace,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 12,
+						},
+						Named = 
+						{
+							string Name = "Body",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [9.83476639e-07, 0.0146566667, -0.866918564],
+							Vec3 Scale = [1, 0.630259156, 4.31411886],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Model = 
+						{
+							bool Visible = true,
+							bool ViewCulling = true,
+							bool VisibilityEvents = true,
+							string Material = "5839083b08c296b9:Flat",
+							string Mesh = "4de0354322b345ae:Cube",
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsEvents = true,
+							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
+							string CollisionGroup = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 HalfSize = [0.5, 0.5, 0.5],
+						},
+						RigidBody = 
+						{
+							Vec3 Velocity = [0, 0, 0],
+							Vec3 AngularVelocity = [0, 0, 0],
+							Enum DynamicState = Kinematic,
+							bool AllowSleep = true,
+							bool Asleep = false,
+							bool RotationLocked = false,
+							Enum Mode2D = InheritFromSpace,
+						},
+					},
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 13,
+				},
+				Named = 
+				{
+					string Name = "Camera",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.761423349, 6.37925196],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Camera = 
+				{
+					Facing Facing = NegativeZ,
+					float NearPlane = 0.5,
+					float FarPlane = 100,
+					PerspectiveMode PerspectiveMode = Perspective,
+					float FieldOfView = 45,
+					float Size = 20,
+				},
+				CameraViewport = 
+				{
+					bool RenderInEditor = false,
+					bool RenderInGame = true,
+					bool RenderToViewport = true,
+					bool ForwardViewportEvents = false,
+					uint RenderOrder = 0,
+					Vec2 NormalizedSize = [1, 1],
+					Vec2 NormalizedOffset = [0, 0],
+					CogPath Camera = 
+					{
+						string Path = ".",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 13,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath Renderer = 
+					{
+						string Path = ".",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 13,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec2 Resolution = [1280, 720],
+					ViewportScaling ViewportScaling = Fill,
+					Vec4 MarginColor = [0, 0, 0, 1],
+				},
+				DefaultRenderer = 
+				{
+					Vec4 ClearColor = [0.245000005, 0.245000005, 0.245000005, 1],
+					bool DrawDebug = true,
+				},
+				SoundListener = 
+				{
+					bool Active = true,
+				},
+			},
+		},
+	},
+},

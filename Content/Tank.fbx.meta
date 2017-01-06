@@ -1,0 +1,80 @@
+GeometryContent = 
+{
+	GeometryImport = 
+	{
+		Vec3 OriginOffset = [0, 0, 0],
+		float ScaleFactor = 1,
+		bool ChangeBasis = false,
+		BasisType XBasisTo = PositiveX,
+		BasisType YBasisTo = PositiveY,
+		BasisType ZBasisTo = PositiveZ,
+	},
+	MeshBuilder = 
+	{
+		bool GenerateSmoothNormals = false,
+		float SmoothingAngleDegreesThreshold = 30,
+		bool GenerateTangentSpace = false,
+		bool InvertUvYAxis = false,
+		bool FlipWindingOrder = false,
+		PhysicsImport PhysicsImport = NoMesh,
+		Array Meshes = 
+		[
+			{
+				string Name = "Tank.TankGun",
+				uint64 ResourceId = 58393bedfd23d5dd,
+			},
+			{
+				string Name = "Tank.TankTurretShaft",
+				uint64 ResourceId = 58393bedfd23d5f5,
+			},
+			{
+				string Name = "Tank.polySurface2",
+				uint64 ResourceId = 58393bedfd23d5f8,
+			},
+			{
+				string Name = "Tank.pCylinder39",
+				uint64 ResourceId = 58393bedfd23d5fb,
+			},
+			{
+				string Name = "Tank.polySurface4",
+				uint64 ResourceId = 58393bedfd23d5fe,
+			},
+			{
+				string Name = "Tank.pCube9",
+				uint64 ResourceId = 58393bedfd23d601,
+			},
+			{
+				string Name = "Tank.polySurface10",
+				uint64 ResourceId = 58393bedfd23d604,
+			},
+			{
+				string Name = "Tank.pCube11",
+				uint64 ResourceId = 58393bedfd23d607,
+			},
+			{
+				string Name = "Tank.polySurface11",
+				uint64 ResourceId = 58393bedfd23d609,
+			},
+			{
+				string Name = "Tank.polySurface12",
+				uint64 ResourceId = 58393bedfd23d60c,
+			},
+			{
+				string Name = "Tank.TankTread",
+				uint64 ResourceId = 58393bedfd23d60f,
+			},
+			{
+				string Name = "Tank.pCube13",
+				uint64 ResourceId = 58393bedfd23d612,
+			},
+			{
+				string Name = "Tank.TankTurret",
+				uint64 ResourceId = 58393bedfd23d614,
+			},
+			{
+				string Name = "Tank.",
+				uint64 ResourceId = 58393bedfd23d619,
+			},
+		],
+	},
+},

@@ -1,0 +1,31 @@
+Cog = 
+{
+	Project = 
+	{
+		string ProjectName = "VOIDVehicleControllers",
+		string ProjectOwner = "",
+		string DefaultLevel = "Level",
+		string ProjectSpace = "Space",
+		uint ProjectEngineRevision = 14599,
+		bool AutoTakeProjectScreenshot = true,
+		uint64 Guid = 58391361fc634fcb,
+	},
+	EditorSettings = 
+	{
+		EditorMode EditorMode = Mode3D,
+		bool ViewCube = true,
+		float ViewCubeSize = 0.150000006,
+		ScriptReloadMethod ScriptReloadEditor = ReInitializeObjects,
+		ScriptReloadMethod ScriptReloadGame = PatchObjects,
+		bool AutoUpdateContentChanges = true,
+	},
+	LauncherProjectInfo = 
+	{
+		string Tags = "",
+		string ExperimentalBranch = "",
+		int MajorVersion = 0,
+		int MinorVersion = 0,
+		int PatchVersion = 0,
+		int RevisionId = 14599,
+	},
+},

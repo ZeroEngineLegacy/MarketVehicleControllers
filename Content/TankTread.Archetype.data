@@ -1,0 +1,31 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "TankTread",
+	},
+	Archetyped = 
+	{
+		string Name = "5567a69c4c191bc3:TankTread",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-0.198131, 0.0853295, 0],
+		Vec3 Scale = [0.01, 0.01, 0.01],
+		Quat Rotation = [0, 0, 0.318, 0.948091],
+	},
+	Model = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = false,
+		bool CastShadows = true,
+		string MaterialName = "5567a53dc7d65950:ModelColor",
+		string MeshName = "5567a7f2874d4ff6:Tank.TankTread",
+		Vec4 Color = [0.435, 0.435, 0.435, 1],
+	},
+},

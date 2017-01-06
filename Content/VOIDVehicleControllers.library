@@ -1,0 +1,7 @@
+ContentLibrary = 
+{
+	string Name = "VOIDVehicleControllers",
+	uint64 LibraryId = 58391361fc63bd48,
+	string SourceControlType = "",
+	bool ReadOnly = false,
+},

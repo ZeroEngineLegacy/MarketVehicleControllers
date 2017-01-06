@@ -1,0 +1,156 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Treads",
+	},
+	Archetyped = 
+	{
+		string Name = "5567ab380d0f2ad5:Treads",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0.967695, -3.33412],
+		Vec3 Scale = [5, 5, 5],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	LevelPath = 
+	{
+		Array ControlPoints = 
+		[
+[-0.372447, 1.68655, -3.33412],
+[0.612958, 1.31501, -3.33412],
+[1.88372, 0.948596, -3.33412],
+[1.53507, 0.341558, -3.33412],
+[0.259317, 0.504872, -3.33412],
+[-1.69549, 0.355197, -3.33412],
+[-1.14199, 1.42926, -3.33412],
+		],
+		bool Closed = true,
+		PathType PathType = BSpline,
+		float Error = 0.0001,
+		bool DebugDraw = true,
+		bool ProxyObjects = true,
+	},
+	Treads = 
+	{
+		string TreadArchetype = "5567a69c4c191bc3:TankTread",
+		int TreadCount = 20,
+		float CurrentSpeed = 1,
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "WheelBack",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.194277, -0.0248401, 0.011599],
+				Vec3 Scale = [0.01, 0.01, 0.01],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Model = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = false,
+				bool CastShadows = true,
+				string MaterialName = "5567a7f2877aa4d9:lambert3",
+				string MeshName = "5567a7f2874d4ff4:Tank.polySurface12",
+				Vec4 Color = [1, 1, 1, 1],
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "SidePannel",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.00343205, 0.00553865, -0.03469],
+				Vec3 Scale = [0.01, 0.01, 0.01],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Model = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = false,
+				bool CastShadows = true,
+				string MaterialName = "5567a7f2877aa4d9:lambert3",
+				string MeshName = "5567a7f2874d4ff1:Tank.pCube11",
+				Vec4 Color = [1, 1, 1, 1],
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Named = 
+			{
+				string Name = "WheelTop",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.0725899, 0.0611168, 0.011492],
+				Vec3 Scale = [0.01, 0.01, 0.01],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Model = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = false,
+				bool CastShadows = true,
+				string MaterialName = "5567a7f2877aa4d9:lambert3",
+				string MeshName = "5567a7f2874d4ff2:Tank.polySurface11",
+				Vec4 Color = [1, 1, 1, 1],
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 5,
+			},
+			Named = 
+			{
+				string Name = "WheelFront",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0.270299, -0.0418153, 0.011599],
+				Vec3 Scale = [0.01, 0.01, 0.01],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Model = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = false,
+				bool CastShadows = true,
+				string MaterialName = "5567a7f2877aa4d9:lambert3",
+				string MeshName = "5567a7f2874d4fef:Tank.polySurface10",
+				Vec4 Color = [1, 1, 1, 1],
+			},
+		},
+	},
+},
