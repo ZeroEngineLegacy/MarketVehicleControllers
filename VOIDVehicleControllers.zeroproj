@@ -1,31 +1,36 @@
-Cog = 
+[Version:1]
+Cog 
 {
-	Project = 
+	var Name = ""
+	Project 
 	{
-		string ProjectName = "VOIDVehicleControllers",
-		string ProjectOwner = "",
-		string DefaultLevel = "Level",
-		string ProjectSpace = "Space",
-		uint ProjectEngineRevision = 14599,
-		bool AutoTakeProjectScreenshot = true,
-		uint64 Guid = 58391361fc634fcb,
-	},
-	EditorSettings = 
+		var ProjectName = "VOIDVehicleControllers"
+		var ProjectOwner = ""
+		var DefaultLevel = "Level"
+		var ProjectSpace = "Space"
+		var ProjectEngineRevision = 15585
+		var AutoTakeProjectScreenshot = true
+		var Guid = 0x58391361fc634fcb
+	}
+	EditorSettings 
 	{
-		EditorMode EditorMode = Mode3D,
-		bool ViewCube = true,
-		float ViewCubeSize = 0.150000006,
-		ScriptReloadMethod ScriptReloadEditor = ReInitializeObjects,
-		ScriptReloadMethod ScriptReloadGame = PatchObjects,
-		bool AutoUpdateContentChanges = true,
-	},
-	LauncherProjectInfo = 
+		var ViewCube = true
+		var ViewCubeSize = 0.150000006
+		var ScriptReloadEditor = ScriptReloadMethod.ReInitializeObjects
+		var ScriptReloadGame = ScriptReloadMethod.PatchObjects
+		var AutoUpdateContentChanges = true
+	}
+	ProjectSettings 
 	{
-		string Tags = "",
-		string ExperimentalBranch = "",
-		int MajorVersion = 0,
-		int MinorVersion = 0,
-		int PatchVersion = 0,
-		int RevisionId = 14599,
-	},
-},
+		var EditorMode = EditorMode.Mode3D
+	}
+	LauncherProjectInfo 
+	{
+		var Tags = ""
+		var ExperimentalBranchName = "BraveCobra"
+		var MajorVersion = 0
+		var MinorVersion = 0
+		var PatchVersion = 0
+		var RevisionId = 15585
+	}
+}

@@ -1,686 +1,516 @@
-Level = 
+[Version:1]
+Level 
 {
-	Cog = 
+	Cog 
 	{
-		LinkId = 
+		var Name = "LevelSettings"
+		var LinkId = 1
+		GridDraw 
 		{
-			uint Id = 1,
-		},
-		Named = 
+			var Active = true
+			var HalfCellOffset = false
+			var CellSize = 1
+			var Axis = GridAxis.YAxis
+			var Lines = 100
+			var DrawAxisOrigins = true
+			var AlwaysDrawInEditor = true
+			var DrawInGame = true
+			var GridColor = Vec4{0.5, 0.5, 0.5, 0.400000006}
+			var GridHighlight = Vec4{0, 0, 0, 0.400000006}
+			var HighlightInterval = 10
+			var FollowEditorCamera = false
+		}
+		DragEffect 
 		{
-			string Name = "LevelSettings",
-		},
-		GridDraw = 
-		{
-			bool Active = true,
-			bool HalfCellOffset = false,
-			float CellSize = 1,
-			GridAxis Axis = YAxis,
-			int Lines = 100,
-			bool DrawAxisOrigins = true,
-			bool AlwaysDrawInEditor = true,
-			bool DrawInGame = true,
-			Vec4 GridColor = [0.5, 0.5, 0.5, 0.400000006],
-			Vec4 GridHiLight = [0, 0, 0, 0.400000006],
-			int HilightInterval = 10,
-			bool FollowEditorCamera = false,
-		},
-		DragEffect = 
-		{
-			bool Active = true,
-			bool WakeUpOnChange = true,
-			float Drag = 0.699999988,
-			float AngularDrag = 1,
-		},
-	},
-	Cog = 
+			var Active = true
+			var WakeUpOnChange = true
+			var LinearDamping = 0.200000003
+			var AngularDamping = 0.600000024
+			var LinearDrag = 0.25
+			var AngularDrag = 1.20000005
+		}
+	}
+	Cog 
 	{
-		LinkId = 
+		var Name = "EditorCamera"
+		var LinkId = 2
+		Transform 
 		{
-			uint Id = 2,
-		},
-		Named = 
+			var Translation = Vec3{1.2015053, 5.54179382, 43.1302414}
+			var Scale = Vec3{1, 1, 1}
+			var Rotation = Quat{-0.0497183912, 0.0130096208, 0.000647665467, 0.998678386}
+		}
+		Camera 
 		{
-			string Name = "EditorCamera",
-		},
-		Transform = 
+			var NearPlane = 0.5
+			var FarPlane = 500
+			var PerspectiveMode = PerspectiveMode.Perspective
+			var FieldOfView = 45
+			var Size = 20
+		}
+		CameraViewport 
 		{
-			Vec3 Translation = [-6.04554701, 3.16968465, 4.44962883],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.150878608, -0.472317517, -0.082432352, 0.864498019],
-		},
-		Camera = 
-		{
-			Facing Facing = NegativeZ,
-			float NearPlane = 0.5,
-			float FarPlane = 500,
-			PerspectiveMode PerspectiveMode = Perspective,
-			float FieldOfView = 45,
-			float Size = 20,
-		},
-		CameraViewport = 
-		{
-			bool RenderInEditor = true,
-			bool RenderInGame = false,
-			bool RenderToViewport = true,
-			bool ForwardViewportEvents = false,
-			uint RenderOrder = 0,
-			Vec2 NormalizedSize = [1, 1],
-			Vec2 NormalizedOffset = [0, 0],
-			CogPath Camera = 
+			var RenderInEditor = true
+			var RenderInGame = false
+			var RenderToViewport = true
+			var ForwardViewportEvents = false
+			var RenderOrder = 0
+			var NormalizedSize = Vec2{1, 1}
+			var NormalizedOffset = Vec2{0, 0}
+			var Camera = CogPath
 			{
-				string Path = ".",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			CogPath Renderer = 
+				var Path = "."
+				var ErrorOnResolveToNull = false
+				var ErrorOnPathCantCompute = false
+				var ErrorOnDirectLinkFail = false
+				var UpdateCogOnPathChange = true
+				var UpdatePathOnCogChange = true
+				var UpdateCogOnInitialize = true
+				var ResolvedNullErrorOccurred = false
+				var ResolvedCog = 2
+				var PathPreference0 = CogPathPreference.CogRelative
+				var PathPreference1 = CogPathPreference.SpaceRelative
+				var PathPreference2 = CogPathPreference.Absolute
+			}
+			var Renderer = CogPath
 			{
-				string Path = ".",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec2 Resolution = [1280, 720],
-			ViewportScaling ViewportScaling = Fill,
-			Vec4 MarginColor = [0, 0, 0, 1],
-		},
-		DefaultRenderer = 
+				var Path = "."
+				var ErrorOnResolveToNull = false
+				var ErrorOnPathCantCompute = false
+				var ErrorOnDirectLinkFail = false
+				var UpdateCogOnPathChange = true
+				var UpdatePathOnCogChange = true
+				var UpdateCogOnInitialize = true
+				var ResolvedNullErrorOccurred = false
+				var ResolvedCog = 2
+				var PathPreference0 = CogPathPreference.CogRelative
+				var PathPreference1 = CogPathPreference.SpaceRelative
+				var PathPreference2 = CogPathPreference.Absolute
+			}
+			var Resolution = Vec2{1280, 720}
+			var ViewportScaling = ViewportScaling.Fill
+			var MarginColor = Vec4{0, 0, 0, 1}
+		}
+		EditorCameraController 
 		{
-			Vec4 ClearColor = [0.125, 0.125, 0.125, 1],
-			bool DrawDebug = true,
-		},
-		EditorCameraController = 
+			var ControlMode = ControlMode.Orbit
+			var LookDistance = 46.3530006
+			var VerticalAngle = 0.0994862318
+			var HorizontalAngle = -18.8756084
+			var LookTarget = Vec3{0, 0.937911987, -2.97790718}
+			var MoveSensitivity = 1
+		}
+		DeferredRenderer 
 		{
-			ControlMode ControlMode = Orbit,
-			float LookDistance = 8.26496315,
-			float VerticalAngle = 0.3455742,
-			float HorizontalAngle = 1.00007141,
-			Vec3 LookTarget = [0.498324364, 0.370035887, 0.248517722],
-			float MoveSensitivity = 1,
-		},
-	},
-	Cog = 
+			var DrawDebug = true
+			var GeometryDebug = GeometryValue.None
+			var ShowDiffuse = true
+			var ShowSpecular = true
+			var Skybox = "588753071d9b0924:Milkyway_small"
+			var DrawSkybox = true
+			var DirectLighting = true
+			var IndirectLighting = true
+			var IndirectIntensity = 1
+			var ToneMap = true
+		}
+	}
+	Cog 
 	{
-		LinkId = 
+		var Name = "SpaceShip"
+		var LinkId = 3
+		Transform 
 		{
-			uint Id = 3,
-		},
-		Named = 
+			var Translation = Vec3{0, 0, 0}
+			var Scale = Vec3{1, 1, 1}
+			var Rotation = Quat{0, 0, 0, 1}
+		}
+		Orientation 
 		{
-			string Name = "SpaceShip",
-		},
-		Transform = 
+			var GlobalUp = Vec3{0, 1, 0}
+			var LocalOrientationBasis = Quat{0, 0, 0, 1}
+			var DefaultBases = OrientationBases.ForwardNegativeZUpY
+		}
+		RigidBody 
 		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Orientation = 
+			var Velocity = Vec3{0, 0, 0}
+			var AngularVelocity = Vec3{0, 0, 0}
+			var DynamicState = RigidBodyDynamicState.Dynamic
+			var AllowSleep = true
+			var Asleep = false
+			var RotationLocked = false
+			var Mode2D = Mode2DStates.InheritFromSpace
+		}
+		FlightInputInterpreter 
 		{
-			Vec3 GlobalUp = [0, 1, 0],
-			Vec3 UpVector = [0, 1, 0],
-			Vec3 ForwardVector = [-0, -0, -1],
-			OrientationBases DefaultBases = ForwardNegativeZUpY,
-		},
-		RigidBody = 
+			var StickDeadZone = 0.100000001
+			var TriggerDeadZone = 0.100000001
+			var MouseSensitivity = Vec2{1, 1}
+			var AccelerateKey = Keys.Space
+			var PitchUpKey = Keys.W
+			var PitchDownKey = Keys.S
+			var YawLeftKey = Keys.A
+			var YawRightKey = Keys.D
+			var RollLeftKey = Keys.Q
+			var RollRightKey = Keys.E
+			var BoostKey = Keys.Shift
+			var BoostButton = Buttons.A
+		}
+		ForceBasedFlightController 
 		{
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-			Enum DynamicState = Dynamic,
-			bool AllowSleep = true,
-			bool Asleep = false,
-			bool RotationLocked = false,
-			Enum Mode2D = InheritFromSpace,
-		},
-		FlightInputInterpreter = 
+			var ApplyConstantThrust = false
+			var ThrustForce = 10
+			var ReverseForce = 5
+			var PitchYawForce = 5
+			var RollForce = 5
+			var BoostForce = 100
+		}
+		Hierarchy 
 		{
-			float StickDeadZone = 0.100000001,
-			float TriggerDeadZone = 0.100000001,
-			Vec2 MouseSensitivity = [1, 1],
-			Enum AccelerateKey = Space,
-			Enum PitchUpKey = W,
-			Enum PitchDownKey = S,
-			Enum YawLeftKey = A,
-			Enum YawRightKey = D,
-			Enum RollLeftKey = Q,
-			Enum RollRightKey = E,
-			Enum BoostKey = Shift,
-			Enum BoostButton = A,
-		},
-		ForceBasedFlightController = 
-		{
-			bool ApplyConstantThrust = true,
-			float ThrustForce = 10,
-			float ReverseForce = 5,
-			float PitchYawForce = 5,
-			float RollForce = 5,
-			float BoostForce = 100,
-		},
-		Hierarchy = 
-		{
-			Cog = 
+			Cog 
 			{
-				LinkId = 
+				var Name = "Camera"
+				var LinkId = 4
+				Transform 
 				{
-					uint Id = 4,
-				},
-				Named = 
+					var Translation = Vec3{0, 0.761423349, 6.37925196}
+					var Scale = Vec3{1, 1, 1}
+					var Rotation = Quat{0, 0, 0, 1}
+				}
+				Camera 
 				{
-					string Name = "PlayerModel",
-				},
-				Transform = 
+					var NearPlane = 0.5
+					var FarPlane = 400
+					var PerspectiveMode = PerspectiveMode.Perspective
+					var FieldOfView = 45
+					var Size = 20
+				}
+				CameraViewport 
 				{
-					Vec3 Translation = [0, 0, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				RigidBody = 
+					var RenderInEditor = false
+					var RenderInGame = true
+					var RenderToViewport = true
+					var ForwardViewportEvents = false
+					var RenderOrder = 0
+					var NormalizedSize = Vec2{1, 1}
+					var NormalizedOffset = Vec2{0, 0}
+					var Camera = CogPath
+					{
+						var Path = "."
+						var ErrorOnResolveToNull = false
+						var ErrorOnPathCantCompute = false
+						var ErrorOnDirectLinkFail = false
+						var UpdateCogOnPathChange = true
+						var UpdatePathOnCogChange = true
+						var UpdateCogOnInitialize = true
+						var ResolvedNullErrorOccurred = false
+						var ResolvedCog = 4
+						var PathPreference0 = CogPathPreference.CogRelative
+						var PathPreference1 = CogPathPreference.SpaceRelative
+						var PathPreference2 = CogPathPreference.Absolute
+					}
+					var Renderer = CogPath
+					{
+						var Path = "."
+						var ErrorOnResolveToNull = false
+						var ErrorOnPathCantCompute = false
+						var ErrorOnDirectLinkFail = false
+						var UpdateCogOnPathChange = true
+						var UpdatePathOnCogChange = true
+						var UpdateCogOnInitialize = true
+						var ResolvedNullErrorOccurred = false
+						var ResolvedCog = 4
+						var PathPreference0 = CogPathPreference.CogRelative
+						var PathPreference1 = CogPathPreference.SpaceRelative
+						var PathPreference2 = CogPathPreference.Absolute
+					}
+					var Resolution = Vec2{1280, 720}
+					var ViewportScaling = ViewportScaling.Fill
+					var MarginColor = Vec4{0, 0, 0, 1}
+				}
+				DefaultRenderer 
 				{
-					Vec3 Velocity = [0, 0, 0],
-					Vec3 AngularVelocity = [0, 0, 0],
-					Enum DynamicState = Kinematic,
-					bool AllowSleep = true,
-					bool Asleep = false,
-					bool RotationLocked = false,
-					Enum Mode2D = InheritFromSpace,
-				},
-				Hierarchy = 
+					var ClearColor = Vec4{0, 0, 0, 1}
+					var DrawDebug = true
+				}
+				SoundListener 
 				{
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 5,
-						},
-						Named = 
-						{
-							string Name = "Gun",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [-1.25, 0.114591047, -0.850334167],
-							Vec3 Scale = [0.25, 0.289018273, 0.862823725],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Orientation = 
-						{
-							Vec3 GlobalUp = [0, 1, 0],
-							Vec3 UpVector = [0, 1, 0],
-							Vec3 ForwardVector = [-0, -0, -1],
-							OrientationBases DefaultBases = ForwardNegativeZUpY,
-						},
-						BoxCollider = 
-						{
-							bool Ghost = false,
-							bool SendsEvents = true,
-							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
-							string CollisionGroup = "4e740859314e5515:DefaultGroup",
-							Vec3 Offset = [0, 0, 0],
-							Vec3 HalfSize = [0.5, 0.5, 0.5],
-						},
-						Model = 
-						{
-							bool Visible = true,
-							bool ViewCulling = true,
-							bool VisibilityEvents = true,
-							string Material = "4de020863e85bb61:DefaultMaterial",
-							string Mesh = "4de0354322b345ae:Cube",
-						},
-						RigidBody = 
-						{
-							Vec3 Velocity = [0, 0, 0],
-							Vec3 AngularVelocity = [0, 0, 0],
-							Enum DynamicState = Kinematic,
-							bool AllowSleep = true,
-							bool Asleep = false,
-							bool RotationLocked = false,
-							Enum Mode2D = InheritFromSpace,
-						},
-						Hierarchy = 
-						{
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 6,
-						},
-						Named = 
-						{
-							string Name = "LeftThrust",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [-1.5, 0.0146566126, 1.30672646],
-							Vec3 Scale = [0.249999985, 0.647117794, 0.225795239],
-							Quat Rotation = [0.707107067, -3.54671634e-08, -2.49304239e-08, 0.707106531],
-						},
-						Model = 
-						{
-							bool Visible = true,
-							bool ViewCulling = true,
-							bool VisibilityEvents = true,
-							string Material = "4de020863e85bb61:DefaultMaterial",
-							string Mesh = "4de0354322b3572e:Cylinder",
-						},
-						CylinderCollider = 
-						{
-							bool Ghost = false,
-							bool SendsEvents = true,
-							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
-							string CollisionGroup = "4e740859314e5515:DefaultGroup",
-							Vec3 Offset = [0, 0, 0],
-							float Radius = 1,
-							float Height = 1,
-							AxisDirection Direction = Y,
-						},
-						RigidBody = 
-						{
-							Vec3 Velocity = [0, 0, 0],
-							Vec3 AngularVelocity = [0, 0, 0],
-							Enum DynamicState = Kinematic,
-							bool AllowSleep = true,
-							bool Asleep = false,
-							bool RotationLocked = false,
-							Enum Mode2D = InheritFromSpace,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 7,
-						},
-						Named = 
-						{
-							string Name = "MidThrust",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, 0.0146566126, 1.30672646],
-							Vec3 Scale = [1, 1, 1],
-							Quat Rotation = [0.707107067, -3.54671634e-08, -2.49304239e-08, 0.707106531],
-						},
-						Model = 
-						{
-							bool Visible = true,
-							bool ViewCulling = true,
-							bool VisibilityEvents = true,
-							string Material = "4de020863e85bb61:DefaultMaterial",
-							string Mesh = "4de0354322b3572e:Cylinder",
-						},
-						CylinderCollider = 
-						{
-							bool Ghost = false,
-							bool SendsEvents = true,
-							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
-							string CollisionGroup = "4e740859314e5515:DefaultGroup",
-							Vec3 Offset = [0, 0, 0],
-							float Radius = 0.5,
-							float Height = 1,
-							AxisDirection Direction = Y,
-						},
-						RigidBody = 
-						{
-							Vec3 Velocity = [0, 0, 0],
-							Vec3 AngularVelocity = [0, 0, 0],
-							Enum DynamicState = Kinematic,
-							bool AllowSleep = true,
-							bool Asleep = false,
-							bool RotationLocked = false,
-							Enum Mode2D = InheritFromSpace,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 8,
-						},
-						Named = 
-						{
-							string Name = "Gun",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [1.25, 0.114591047, -0.850334167],
-							Vec3 Scale = [0.25, 0.289018273, 0.862823725],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Orientation = 
-						{
-							Vec3 GlobalUp = [0, 1, 0],
-							Vec3 UpVector = [0, 1, 0],
-							Vec3 ForwardVector = [-0, -0, -1],
-							OrientationBases DefaultBases = ForwardNegativeZUpY,
-						},
-						BoxCollider = 
-						{
-							bool Ghost = false,
-							bool SendsEvents = true,
-							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
-							string CollisionGroup = "4e740859314e5515:DefaultGroup",
-							Vec3 Offset = [0, 0, 0],
-							Vec3 HalfSize = [0.5, 0.5, 0.5],
-						},
-						Model = 
-						{
-							bool Visible = true,
-							bool ViewCulling = true,
-							bool VisibilityEvents = true,
-							string Material = "4de020863e85bb61:DefaultMaterial",
-							string Mesh = "4de0354322b345ae:Cube",
-						},
-						RigidBody = 
-						{
-							Vec3 Velocity = [0, 0, 0],
-							Vec3 AngularVelocity = [0, 0, 0],
-							Enum DynamicState = Kinematic,
-							bool AllowSleep = true,
-							bool Asleep = false,
-							bool RotationLocked = false,
-							Enum Mode2D = InheritFromSpace,
-						},
-						Hierarchy = 
-						{
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 9,
-						},
-						Named = 
-						{
-							string Name = "Wing",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [1, 0.0146566126, 0.350043297],
-							Vec3 Scale = [1.6050818, 0.289018273, 1.66491675],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Orientation = 
-						{
-							Vec3 GlobalUp = [0, 1, 0],
-							Vec3 UpVector = [0, 0, 1],
-							Vec3 ForwardVector = [0, 1, 0],
-							OrientationBases DefaultBases = ForwardYUpZ,
-						},
-						BoxCollider = 
-						{
-							bool Ghost = false,
-							bool SendsEvents = true,
-							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
-							string CollisionGroup = "4e740859314e5515:DefaultGroup",
-							Vec3 Offset = [0, 0, 0],
-							Vec3 HalfSize = [0.5, 0.5, 0.5],
-						},
-						Model = 
-						{
-							bool Visible = true,
-							bool ViewCulling = true,
-							bool VisibilityEvents = true,
-							string Material = "4de020863e85bb61:DefaultMaterial",
-							string Mesh = "4de0354322b345ae:Cube",
-						},
-						RigidBody = 
-						{
-							Vec3 Velocity = [0, 0, 0],
-							Vec3 AngularVelocity = [0, 0, 0],
-							Enum DynamicState = Kinematic,
-							bool AllowSleep = true,
-							bool Asleep = false,
-							bool RotationLocked = false,
-							Enum Mode2D = InheritFromSpace,
-						},
-						Hierarchy = 
-						{
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 10,
-						},
-						Named = 
-						{
-							string Name = "Wing",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [-0.999998093, 0.0146566126, 0.350043297],
-							Vec3 Scale = [1.6050818, 0.289018273, 1.66491675],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Orientation = 
-						{
-							Vec3 GlobalUp = [0, 1, 0],
-							Vec3 UpVector = [0, 0, 1],
-							Vec3 ForwardVector = [0, 1, 0],
-							OrientationBases DefaultBases = ForwardYUpZ,
-						},
-						BoxCollider = 
-						{
-							bool Ghost = false,
-							bool SendsEvents = true,
-							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
-							string CollisionGroup = "4e740859314e5515:DefaultGroup",
-							Vec3 Offset = [0, 0, 0],
-							Vec3 HalfSize = [0.5, 0.5, 0.5],
-						},
-						Model = 
-						{
-							bool Visible = true,
-							bool ViewCulling = true,
-							bool VisibilityEvents = true,
-							string Material = "4de020863e85bb61:DefaultMaterial",
-							string Mesh = "4de0354322b345ae:Cube",
-						},
-						RigidBody = 
-						{
-							Vec3 Velocity = [0, 0, 0],
-							Vec3 AngularVelocity = [0, 0, 0],
-							Enum DynamicState = Kinematic,
-							bool AllowSleep = true,
-							bool Asleep = false,
-							bool RotationLocked = false,
-							Enum Mode2D = InheritFromSpace,
-						},
-						Hierarchy = 
-						{
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 11,
-						},
-						Named = 
-						{
-							string Name = "RightThrust",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [1.5, 0.0146566126, 1.30672646],
-							Vec3 Scale = [0.249999985, 0.647117794, 0.225795239],
-							Quat Rotation = [0.707107067, -3.54671634e-08, -2.49304239e-08, 0.707106531],
-						},
-						Model = 
-						{
-							bool Visible = true,
-							bool ViewCulling = true,
-							bool VisibilityEvents = true,
-							string Material = "4de020863e85bb61:DefaultMaterial",
-							string Mesh = "4de0354322b3572e:Cylinder",
-						},
-						CylinderCollider = 
-						{
-							bool Ghost = false,
-							bool SendsEvents = true,
-							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
-							string CollisionGroup = "4e740859314e5515:DefaultGroup",
-							Vec3 Offset = [0, 0, 0],
-							float Radius = 1,
-							float Height = 1,
-							AxisDirection Direction = Y,
-						},
-						RigidBody = 
-						{
-							Vec3 Velocity = [0, 0, 0],
-							Vec3 AngularVelocity = [0, 0, 0],
-							Enum DynamicState = Kinematic,
-							bool AllowSleep = true,
-							bool Asleep = false,
-							bool RotationLocked = false,
-							Enum Mode2D = InheritFromSpace,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 12,
-						},
-						Named = 
-						{
-							string Name = "Body",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [9.83476639e-07, 0.0146566667, -0.866918564],
-							Vec3 Scale = [1, 0.630259156, 4.31411886],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Model = 
-						{
-							bool Visible = true,
-							bool ViewCulling = true,
-							bool VisibilityEvents = true,
-							string Material = "5839083b08c296b9:Flat",
-							string Mesh = "4de0354322b345ae:Cube",
-						},
-						BoxCollider = 
-						{
-							bool Ghost = false,
-							bool SendsEvents = true,
-							string Material = "4de020863e872da8:DefaultPhysicsMaterial",
-							string CollisionGroup = "4e740859314e5515:DefaultGroup",
-							Vec3 Offset = [0, 0, 0],
-							Vec3 HalfSize = [0.5, 0.5, 0.5],
-						},
-						RigidBody = 
-						{
-							Vec3 Velocity = [0, 0, 0],
-							Vec3 AngularVelocity = [0, 0, 0],
-							Enum DynamicState = Kinematic,
-							bool AllowSleep = true,
-							bool Asleep = false,
-							bool RotationLocked = false,
-							Enum Mode2D = InheritFromSpace,
-						},
-					},
-				},
-			},
-			Cog = 
+					var Active = true
+				}
+			}
+			Cog 
 			{
-				LinkId = 
+				var Name = "ShipModel"
+				var LinkId = 5
+				Transform 
 				{
-					uint Id = 13,
-				},
-				Named = 
+					var Translation = Vec3{0, 0, 0}
+					var Scale = Vec3{1, 1, 1}
+					var Rotation = Quat{0, 0, 0, 1}
+				}
+				Model 
 				{
-					string Name = "Camera",
-				},
-				Transform = 
+					var Visible = true
+					var ViewCulling = true
+					var VisibilityEvents = true
+					var Material = "588699fdf8a2d08c:SpaceShip"
+					var Mesh = "58869a8231516217:spacefighterLow.Spacefighter"
+				}
+			}
+			Cog 
+			{
+				var Name = "ShipModel"
+				var LinkId = 6
+				Transform 
 				{
-					Vec3 Translation = [0, 0.761423349, 6.37925196],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Camera = 
+					var Translation = Vec3{0, 0, 32.6743546}
+					var Scale = Vec3{1, 1, 1}
+					var Rotation = Quat{0, 0, 0, 1}
+				}
+				Model 
 				{
-					Facing Facing = NegativeZ,
-					float NearPlane = 0.5,
-					float FarPlane = 100,
-					PerspectiveMode PerspectiveMode = Perspective,
-					float FieldOfView = 45,
-					float Size = 20,
-				},
-				CameraViewport = 
+					var Visible = true
+					var ViewCulling = true
+					var VisibilityEvents = true
+					var Material = "588699fdf8a2d08c:SpaceShip"
+					var Mesh = "588699ccf6a6fa60:spacefighter.Spacefighter"
+				}
+			}
+		}
+	}
+	Cog 
+	{
+		var Name = "BasicParticleEffect"
+		var LinkId = 7
+		Transform 
+		{
+			var Translation = Vec3{0, 0, 0}
+			var Scale = Vec3{1, 1, 1}
+			var Rotation = Quat{0, 0, 0, 1}
+		}
+		SpriteParticleSystem 
+		{
+			var Visible = false
+			var ViewCulling = true
+			var VisibilityEvents = true
+			var Material = "56dcc7b15f51207d:DefaultSpriteMaterial"
+			var ChildMode = SystemChildMode.Independent
+			var SystemSpace = SystemSpace.WorldSpace
+			var DrawOrder = 0
+			var Tint = Vec4{1, 1, 1, 1}
+			var WarmUpTime = 10
+			var GeometryMode = ParticleGeometry.Billboarded
+			var SortMode = ParticleSortMode.Youngest
+			var ParticleAnimation = ParticleAnimation.Looping
+			var SpriteSource = "5274db4c2e7c11f9:Circle"
+			var VelocityScale = 1
+			var LengthScale = 1
+			var SystemSize = Vec3{500, 500, 500}
+			var PreviewInEditor = false
+		}
+		SphericalParticleEmitter 
+		{
+			var Active = true
+			var EmitCount = 0
+			var EmitRate = 500
+			var EmitVariance = 0
+			var Size = 0.0199999996
+			var SizeVariance = 0.00999999978
+			var Lifetime = 10
+			var LifetimeVariance = 1
+			var Spin = 0
+			var SpinVariance = 50
+			var RandomSpin = true
+			var Fill = 0
+			var EmitterVelocityPercent = 0
+			var StartVelocity = Vec3{0, 0, 0}
+			var RandomVelocity = Vec3{0, 0, 0}
+			var TangentVelocity = Vec3{0, 0, 0}
+			var EmitterSize = Vec3{500, 500, 500}
+			var FastMovingEmitter = false
+		}
+		LinearParticleAnimator 
+		{
+			var Force = Vec3{0, 0, 0}
+			var RandomForce = Vec3{0, 0, 0}
+			var Torque = 0
+			var Growth = 0
+			var Dampening = 0
+			var Twist = Vec3{0, 0, 0}
+		}
+		ParticleColorAnimator 
+		{
+			var Color0 = Vec4{1, 1, 1, 0}
+			var Color1 = Vec4{1, 1, 1, 1}
+			var Color2 = Vec4{1, 1, 1, 1}
+			var Color3 = Vec4{1, 1, 1, 1}
+			var Color4 = Vec4{1, 1, 1, 0}
+		}
+	}
+	Cog 
+	{
+		var Name = "Transform"
+		var LinkId = 8
+		Transform 
+		{
+			var Translation = Vec3{-28.5092773, 0.937911987, -2.97790718}
+			var Scale = Vec3{1, 1, 1}
+			var Rotation = Quat{0, 0, 0, 1}
+		}
+	}
+	Cog [InheritId:"5886b15406f6fbb6:satbase"]
+	{
+		Transform 
+		{
+			var Translation = Vec3{-30, 0, 5}
+			var Rotation = Quat{0, 0, 0, 1}
+			var Scale = Vec3{1, 1, 1}
+		}
+		Hierarchy 
+		{
+			Cog [Id:0x5886b10d0e86dd89]
+			{
+				Hierarchy 
 				{
-					bool RenderInEditor = false,
-					bool RenderInGame = true,
-					bool RenderToViewport = true,
-					bool ForwardViewportEvents = false,
-					uint RenderOrder = 0,
-					Vec2 NormalizedSize = [1, 1],
-					Vec2 NormalizedOffset = [0, 0],
-					CogPath Camera = 
+					Cog [Id:0x5886b10d0e86dd8e]
 					{
-						string Path = ".",
-						bool ErrorOnResolveToNull = false,
-						bool ErrorOnPathCantCompute = false,
-						bool ErrorOnDirectLinkFail = false,
-						bool UpdateCogOnPathChange = true,
-						bool UpdatePathOnCogChange = true,
-						bool UpdateCogOnInitialize = true,
-						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 13,
-						CogPathPreference PathPreference0 = CogRelative,
-						CogPathPreference PathPreference1 = SpaceRelative,
-						CogPathPreference PathPreference2 = Absolute,
-					},
-					CogPath Renderer = 
+						Hierarchy 
+						{
+							Cog [Id:0x5886b10d0e86dd8f]
+							{
+								Hierarchy 
+								{
+									Cog [Id:0x5886b10d0e86dd91]
+									{
+										Hierarchy 
+										{
+											Cog [Id:0x5886b10d0e86dd92]
+											{
+												Transform 
+												{
+													var Translation = Vec3{-92.9510803, 0, 0}
+												}
+												Model 
+												{
+													var Material = "58869b3e522a3f5d:Satellite"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	Cog [InheritId:"5886b1ff24254610:panels"]
+	{
+		Transform 
+		{
+			var Translation = Vec3{-30, 0, 5}
+			var Rotation = Quat{0, 0, 0, 1}
+			var Scale = Vec3{1, 1, 1}
+		}
+		Hierarchy 
+		{
+			Cog 
+			{
+				Hierarchy 
+				{
+					Cog 
 					{
-						string Path = ".",
-						bool ErrorOnResolveToNull = false,
-						bool ErrorOnPathCantCompute = false,
-						bool ErrorOnDirectLinkFail = false,
-						bool UpdateCogOnPathChange = true,
-						bool UpdatePathOnCogChange = true,
-						bool UpdateCogOnInitialize = true,
-						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 13,
-						CogPathPreference PathPreference0 = CogRelative,
-						CogPathPreference PathPreference1 = SpaceRelative,
-						CogPathPreference PathPreference2 = Absolute,
-					},
-					Vec2 Resolution = [1280, 720],
-					ViewportScaling ViewportScaling = Fill,
-					Vec4 MarginColor = [0, 0, 0, 1],
-				},
-				DefaultRenderer = 
+						Hierarchy 
+						{
+							Cog 
+							{
+								Hierarchy 
+								{
+									Cog 
+									{
+										Hierarchy 
+										{
+											Cog 
+											{
+												Transform 
+												{
+													var Translation = Vec3{-92.9510803, 0, 0}
+												}
+												Model 
+												{
+													var Material = "58869bb471ef84ed:SolarPanels"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	Cog [InheritId:"58875451a4b29ad8:Planet1"]
+	{
+		Transform 
+		{
+			var Translation = Vec3{126.70063, 103.660156, -178.800842}
+			var Rotation = Quat{0, 0, 0, 1}
+			var Scale = Vec3{1, 1, 1}
+		}
+		Hierarchy [ChildOrderOverride]
+		{
+			Cog 
+			{
+				Transform 
 				{
-					Vec4 ClearColor = [0.245000005, 0.245000005, 0.245000005, 1],
-					bool DrawDebug = true,
-				},
-				SoundListener = 
+					var Translation = Vec3{-50.8774719, -86.0144806, 123.476776}
+					var Scale = Vec3{0.100000001, 0.100000001, 0.100000001}
+				}
+				Model 
 				{
-					bool Active = true,
-				},
-			},
-		},
-	},
-},
+					var Material = "58875b87944535df:Planet1"
+				}
+			}
+		}
+	}
+	Cog [InheritId:"58875567dcc36bac:Asteroid"]
+	{
+		Transform 
+		{
+			var Translation = Vec3{3.83664703, 29.2791748, 11.1529541}
+			var Rotation = Quat{0, 0, 0, 1}
+			var Scale = Vec3{1, 1, 1}
+		}
+		Hierarchy 
+		{
+			Cog 
+			{
+				Model 
+				{
+					var Material = "58875539e265f84f:Asteroid"
+				}
+			}
+		}
+	}
+	Cog 
+	{
+		var Name = "planet1"
+		var LinkId = 9
+		Transform 
+		{
+			var Translation = Vec3{156.545135, 18.9601135, 137.127838}
+			var Scale = Vec3{0.5, 0.5, 0.5}
+			var Rotation = Quat{0, 0, 0, 1}
+		}
+		Model 
+		{
+			var Visible = true
+			var ViewCulling = true
+			var VisibilityEvents = true
+			var Material = "588754f7c76f487b:Planet2"
+			var Mesh = "58875451a48d3411:Planet1.planet1"
+		}
+	}
+}

@@ -1,9 +1,0 @@
-DataContent = 
-{
-	RichAnimationBuilder = 
-	{
-		string Name = "TurretFire.Animation",
-		uint64 ResourceId = 58393bedfd26a253,
-		string PreviewArchetype = "",
-	},
-},
