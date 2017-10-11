@@ -4,7 +4,7 @@ Cog
 	var Name = ""
 	Project 
 	{
-		var ProjectName = "VOIDVehicleControllers"
+		var ProjectName = "MarketVehicleControllers"
 		var ProjectOwner = ""
 		var DefaultLevel = "Level"
 		var ProjectSpace = "Space"
